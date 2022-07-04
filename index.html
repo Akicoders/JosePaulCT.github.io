@@ -2,38 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentacion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Marvel:wght@700&family=Press+Start+2P&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ee93e08078.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" crossorigin="anonymous">
-    <title>Calculadora</title>
 </head>
 <body>
-<div class="content_calculadora">
-<div class="calculadora">
-    <div class="resultado" >
-        <span id="resultado"></span>
+    <header id="content_nav">
+    <nav id="nav_bar">
+        <ul>
+            <li> <a href="#welcome_section" target="_self" rel="noopener noreferrer" aria-label="Bienvenido"><button class="polimorfismo" type="button"  title="Presentacion"> <i class="fas fa-home"></i> </button>     </a>  </li>
+            <li> <a href="#proyects" target="_self" rel="noopener noreferrer" aria-label="Proyectos"><button class="polimorfismo" type="button" title="Proyectos" > <i class="fas fa-briefcase"></i></button> </a>  </li>
+            <li> <a href="#contact" target="_self" rel="noopener noreferrer" aria-label="Contacto" ><button class="polimorfismo" type="button" title="Contacto"  > <i class="fas fa-phone"></i></button>     </a>  </li>
+        </ul>
+    </nav>
+    </header>
+    <section id="welcome_section">
+    <div id="welcome_section_letters">
+        <h1>Hi, I 'm Paul. </h1>
+        <p>I design and build websites</p>
     </div>
-    <div class="botones">
-    <button type="button" id="seven">7</button>
-    <button type="button" id="eigth">8</button>
-    <button type="button" id="nine">9</button>
-    <button type="button" id="dividir">/</button>
-    <button type="button" id="four">4</button>
-    <button type="button" id="five">5</button>
-    <button type="button" id="six">6</button>
-    <button type="button" id="multiplicar">*</button>
-    <button type="button" id="one">1</button>
-    <button type="button" id="two">2</button>
-    <button type="button" id="three">3</button>
-    <button type="button" id="resta">-</button>
-    <button type="button" id="equal">=</button>
-    <button type="button" id="reset">C</button>
-    <button type="button" id="zero">0</button>
-    <button type="button" id="plus">+</button>
+    </section>
+
+    <section id="proyects">
+        <h2 id="animado">My Proyects</h2>
+    <div id="proyects_grid">
+
+    <div class="page_1">
+    <a href="https://codepen.io/Paul_programador/pen/xxXvwRe" target="_blank" rel="noopener noreferrer">
+        <figure>
+            <div>
+            <img src="https://shots.codepen.io/Paul_programador/pen/xxXvwRe-800.webp?version=1642989968" alt="pagina_tributo">
+            </div>
+            <figcaption>  <p> <span id="derecha"><</span>Tributo a Mario Vargas LLosa<span id="izquierda">></span></p> </figcaption>
+        </figure>
+    </a>
     </div>
-</div>
-</div>
+
+    <div class="page_2">
+        <figure>
+            <a href="https://codepen.io/Paul_programador/pen/JjOPXeZ" target="_blank" rel="noopener noreferrer">
+            <div>
+            <img src="https://shots.codepen.io/Paul_programador/pen/JjOPXeZ-800.webp?version=1643386918" alt="pagina_encuesta">
+            </div>
+        <figcaption>  <p> <span id="derecha"> < </span> Formulario <span id="izquierda">></span> </p> </figcaption>
+        </a>
+    </figure>
+        </div>
+
+    <div class="page_3">
+        <figure>
+        <a href="https://codepen.io/Paul_programador/details/KKyNVzr"  target="_blank" rel="noopener noreferrer">
+            <div>
+            <img src="https://shots.codepen.io/Paul_programador/pen/KKyNVzr-800.webp?version=1645823618" alt="pagina_producto">
+            </div>
+            <figcaption>  <p> <span id="derecha"><</span> Aterrizaje de Producto <span id="izquierda"> ></span> </p> </figcaption>
+        </a>
+        </figure>
+    </div>
+
+    <div class="page_4">
+        <figure>
+        <a href="https://codepen.io/Paul_programador/pen/jOaQEBN" target="_blank" rel="noopener noreferrer" >
+            <div>
+            <img src="https://shots.codepen.io/Paul_programador/pen/jOaQEBN-800.webp?version=1646586920" alt="pagina_producto">
+        </div>
+            <figcaption>   <p id="text">  <span id="derecha"> < </span> Documentacion de Python <span  id="izquierda"> ></span> </p>  </figcaption>
+        </a>
+        </figure>
+    </div>
+    </div>
+    </section>
+
+    <section id="contact">
+    <div class="content_contact">
+        <h3>  Let's work together...</h3>
+        <p> Contact</p>
+        <p> do you have any questions?  </p>
+        <ul>
+            <li> <a href="http://www.facebook.com"  target="_self" rel="noopener noreferrer" aria-label="Mi facebook"> <i class="fab fa-facebook"></i> </a> </li>
+            <li> <a href="http://www.twitter.com" target="_self" rel="noopener noreferrer" aria-label="Mi twitter" > <i class="fab fa-twitter"></i>  </a> </li>
+            <li> <a href="http://www.github.com"  target="_self" rel="noopener noreferrer" aria-label="Mi Github"> <i class="fab fa-github"></i>   </a> </li>
+        </ul>
+    </div>
+    </section>
 </body>
-<script src="script.js"></script>
+
+<!---Estilos-->
+
+
+<script>
+    window.addEventListener('scroll',function(){
+        let animacion = document.getElementById('animado');
+        let posicionObj1 = animacion.getBoundingClientRect().top ;
+        console.log(posicionObj1);
+        let tamañoDePantalla = window.innerHeight/2;
+
+        if(posicionObj1 < tamañoDePantalla){
+            animacion.style.animation = "proyects_animation 4s 1  1s"
+        }
+    })
+
+    </script>
+
 </html>

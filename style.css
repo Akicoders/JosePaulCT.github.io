@@ -1,126 +1,318 @@
-*{
-    margin: 0;
+*
+{
     padding: 0;
-    box-sizing:border-box;
+    margin: 0;
 }
 
 body
 {
     width: 100%;
-    height: 100vh;
-}
-.content_calculadora
-{
-    border: 10px red solid;
-    border-radius: 20px;
-    margin: 3% auto;
-    display: flex;
-    max-width: min-content;
-    max-height: min-content;
-    min-width: 365px;
-    min-height: 542px;
-}
-.calculadora
-{
-    width: 100%;
-    background: #000;
-    border-radius: 10px;
-}
-.resultado
-{
-    width: 100%;
-    height: 30%;
-    border: #000 10px solid;
-    border-radius: 20px;
-    display: flex;
 }
 
-.botones
+:root
 {
-    border: 10px #000 solid;
-    width: 100%;
-    height: 70%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-button
-{
-    margin: 5px;
-    color: #fff;
-    background: rgba(141, 124, 124, .1);
-    border-radius: 100%;
-    font-size: 20px;
-}
+    --top_h1:150px;
+    --font:'Press Start 2P', cursive;
 
-button:nth-child(4)
-{
-    color: rgb(21, 187, 21);
-    font-size: 30px;
 }
-
-button:nth-child(8)
-{
-    color: rgb(21, 187, 21);
-    font-size: 30px;
-}
-
-button:nth-child(12)
-{
-    color: rgb(21, 187, 21);
-    font-size: 30px;
-}
-
-button:nth-child(16)
-{
-    color: rgb(21, 187, 21);
-    font-size: 30px;
-}
-
-button:nth-child(13)
-{
-    background: rgb(21, 187, 21);
-    color: #000;
-    font-size: 30px;
-}
-
-button:hover
-{
-    border-color: rgba(141, 124, 124, .1);
-}
-
-#resultado
+nav ul
 {
     display: flex;
-    background: rgba(255, 255, 255, 0.774);
+    list-style: none;
+    justify-content: space-around;
+}
+
+#content_nav
+{
+    display: block;
+    background: rgba(125,125,125,.2);
+    padding: 10px;
+    width: 60%;
+    min-width: 350px;
+    position: fixed;
+    margin: 30px auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
     align-items: center;
-    justify-content: center;
-    font-size: 400%;
-    overflow-x: scroll;
-    width: 350px;
 }
-/*@media (max-width:425px)
+.polimorfismo
 {
-    .content_calculadora
+    border-radius: 39px;
+    background: #e0e0e0;
+    box-shadow:  1px 1px 2px #5a5a5a,
+                -1px -1px 2px #ffffff;
+            nav-index: 1;
+}
+
+button i
+{
+    font-size: 20px;
+    padding: 10px;
+    color: #000;
+}
+#welcome_section
+{
+    background-image: url(https://images.unsplash.com/photo-1555066932-e78dd8fb77bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    min-width: 384px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+}
+#welcome_section_letters
+{
+    display: flex;
+    max-width: 100%;
+    width: 80%;
+    height: 30%;
+    flex-direction: column;
+    text-align: center;
+}
+#welcome_section #welcome_section_letters h1
+{
+    font-size: 6vmin;
+    color: #fff;
+    animation-name: titulo_animado;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: .5s;
+    animation-timing-function: linear;
+    top: var(--top_h1);
+    margin: auto;
+    white-space: nowrap;
+}
+
+#welcome_section p
+{
+    font-size: 3vmin;
+    color: #fff;
+    animation-name: parrafo_animado;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: .5s;
+    top: var(--top_h1);
+    opacity: 1;
+    margin:  auto;
+    white-space: nowrap;
+}
+
+#proyects
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#proyects #animado
+{
+    font-size: 2.5em;
+    font-family: var(--font);
+    position: absolute;
+    margin-top: 30px;
+    animation-name: proyects_animation !important;
+}
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+#proyects_grid
+{
+display: grid;
+width: 100%;
+height: 100%;
+grid-template-areas:
+"one two "
+"three fourth"
+;
+justify-content: center;
+    align-items: center;
+margin: auto;
+margin-top: 100px;
+grid-template-columns: 25% 25%;
+grid-column: 10px;
+grid-gap: 30px 50px;
+}
+
+figure div img
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+figure div img:hover
+{
+    outline: solid 3px #059;
+}
+figcaption p
+{
+    grid-area: one;
+    font-size:  .8rem;
+    padding: 5px;
+    font-family: var(--font);
+    font-weight: 200;
+    font-variant: small-caps;
+    text-transform:capitalize;
+}
+
+figure
+{
+    width: 100%;
+}
+figcaption
+{
+    margin-top: 10px;
+    border-bottom: 2px #050 solid;
+}
+.page_1
+{
+    grid-area: one;
+}
+.page_2
+{
+    grid-area: two;
+}
+
+.page_3
+{
+    grid-area: three;
+}
+
+.page_4
+{
+    grid-area: fourth;
+}
+
+span
+{
+    position: relative;
+}
+
+a:hover figcaption  p
+{
+    color:#fff;
+    transition: all 2s;
+}
+
+a:hover figcaption  p span#derecha
+{
+    left: -15px;
+    transition: all 2s linear ;
+    color:#fff;
+}
+
+a:hover figcaption  p span#izquierda
+{
+    left: 15px;
+    transition: all 2s;
+    color:#fff;
+}
+
+a:hover figcaption
+{
+    border-bottom: 3px solid #059;
+}
+@keyframes  proyects_animation
+{
+    0%
     {
-        border: 10px red solid;
-        border-radius: 20px;
-        width: 60%;
-        height: 80%;
-        margin: 10vh auto;
-        display: flex;
+        left: -10000px;
+        opacity: 0;
+    }
+
+    50%
+    {
+        opacity:.2;
+    }
+
+    100%
+    {
+        left: 64vh;
+        opacity: .5;
     }
 }
 
-@media (max-width:375px)
+
+@keyframes parrafo_animado
 {
-    .content_calculadora
+0%
+{
+    opacity: 0;
+}
+50%
+{
+    opacity: 0;
+}
+100%
+{
+    opacity: 1;
+}
+
+}
+@keyframes titulo_animado
+{
+    0%
     {
-        border: 10px red solid;
-        border-radius: 20px;
-        width: 70%;
-        height: 80%;
-        margin: 10vh auto;
-        display: flex;
+        opacity: .1;
+        top: 0;
     }
-}*/
+
+    50%
+    {
+        opacity: .5;
+    }
+
+    100%
+    {
+        top: var(--top_h1);
+    }
+}
+
+#freepik_stories-mobile-marketing
+{
+    width: 100%;
+}
+
+#contact
+{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    font-family: var(--font);
+}
+
+.content_contact
+{
+    display: block;
+    margin: 60px auto;
+    text-align: center;
+    color: rgb(19, 218, 181);
+}
+#contact ul
+{
+    list-style: none;
+    margin: 50px auto;
+    columns: 3;
+}
+
+#contact ul li i
+{
+    font-size: 5rem;
+    color: #fff;
+}
