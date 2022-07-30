@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Marvel:wght@700&family=Press+Start+2P&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ee93e08078.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header id="content_nav">
@@ -28,53 +29,11 @@
     </section>
 
     <section id="proyects">
-        <h2 id="animado">My Proyects</h2>
-    <div id="proyects_grid">
-
-    <div class="page_1">
-    <a href="https://codepen.io/Paul_programador/pen/xxXvwRe" target="_blank" rel="noopener noreferrer">
-        <figure>
-            <div>
-            <img src="https://shots.codepen.io/Paul_programador/pen/xxXvwRe-800.webp?version=1642989968" alt="pagina_tributo">
-            </div>
-            <figcaption>  <p> <span id="derecha"><</span>Tributo a Mario Vargas LLosa<span id="izquierda">></span></p> </figcaption>
-        </figure>
-    </a>
-    </div>
-
-    <div class="page_2">
-        <figure>
-            <a href="https://codepen.io/Paul_programador/pen/JjOPXeZ" target="_blank" rel="noopener noreferrer">
-            <div>
-            <img src="https://shots.codepen.io/Paul_programador/pen/JjOPXeZ-800.webp?version=1643386918" alt="pagina_encuesta">
-            </div>
-        <figcaption>  <p> <span id="derecha"> < </span> Formulario <span id="izquierda">></span> </p> </figcaption>
-        </a>
-    </figure>
+        <div class="proyects_container">
+        <div class="proyects_title">
+        <h2 id="animado" >My Proyects</h2>
         </div>
-
-    <div class="page_3">
-        <figure>
-        <a href="https://codepen.io/Paul_programador/details/KKyNVzr"  target="_blank" rel="noopener noreferrer">
-            <div>
-            <img src="https://shots.codepen.io/Paul_programador/pen/KKyNVzr-800.webp?version=1645823618" alt="pagina_producto">
-            </div>
-            <figcaption>  <p> <span id="derecha"><</span> Aterrizaje de Producto <span id="izquierda"> ></span> </p> </figcaption>
-        </a>
-        </figure>
-    </div>
-
-    <div class="page_4">
-        <figure>
-        <a href="https://codepen.io/Paul_programador/pen/jOaQEBN" target="_blank" rel="noopener noreferrer" >
-            <div>
-            <img src="https://shots.codepen.io/Paul_programador/pen/jOaQEBN-800.webp?version=1646586920" alt="pagina_producto">
         </div>
-            <figcaption>   <p id="text">  <span id="derecha"> < </span> Documentacion de Python <span  id="izquierda"> ></span> </p>  </figcaption>
-        </a>
-        </figure>
-    </div>
-    </div>
     </section>
 
     <section id="contact">
@@ -91,7 +50,7 @@
     </section>
 </body>
 
-<!---Estilos-->
+
 
 
 <script>
@@ -99,13 +58,13 @@
         let animacion = document.getElementById('animado');
         let posicionObj1 = animacion.getBoundingClientRect().top ;
         console.log(posicionObj1);
-        let tamañoDePantalla = window.innerHeight/2;
-
+        let tamañoDePantalla = window.innerHeight/1;
         if(posicionObj1 < tamañoDePantalla){
-            animacion.style.animation = "proyects_animation 4s 1  1s"
+            animacion.style.animation = "backInLeft 1.5s 1  1s";
+            animacion.style.visibility = "visible";
         }
     })
 
     </script>
 
-</html>
+    </html>

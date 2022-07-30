@@ -35,6 +35,7 @@ nav ul
     left: 0;
     right: 0;
     align-items: center;
+    z-index: 1;
 }
 .polimorfismo
 {
@@ -47,16 +48,17 @@ nav ul
 
 button i
 {
-    font-size: 1.5rem;
+    font-size: 1.5vmax;
     padding: 10px;
     color: #000;
 }
 #welcome_section
 {
-    background-image: url(https://images.unsplash.com/photo-1555066932-e78dd8fb77bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-image: url(hoja1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment:fixed;
     display: flex;
     width: 100%;
     min-width: 384px;
@@ -64,6 +66,7 @@ button i
     justify-content: center;
     align-items: center;
     font-family: var(--font);
+    border-bottom: 5px white solid;
 }
 #welcome_section_letters
 {
@@ -105,148 +108,76 @@ button i
 
 #proyects
 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+    background-image: url(hoja2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    border-bottom: 5px white solid;
+    color: #fff;
 }
-
+.proyects_title
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 10%;
+}
 #proyects #animado
 {
-    font-size: 2.5em;
+    font-size: 6vmin;
     font-family: var(--font);
-    position: absolute;
-    margin-top: 30px;
-    animation-name: proyects_animation !important;
+    visibility: hidden;
+    transition: all 0s 1s;
 }
+
 a
 {
     text-decoration: none;
     color: #000;
 }
 
-#proyects_grid
+.carrusel-container
 {
-display: grid;
-width: 100%;
-height: 100%;
-grid-template-areas:
-"one two "
-"three fourth"
-;
-justify-content: center;
-    align-items: center;
-margin: auto;
-margin-top: 100px;
-grid-template-columns: 25% 25%;
-grid-column: 10px;
-grid-gap: 30px 50px;
+    display: flex;
+    width: 98%;
+    background-color: red;
 }
 
-figure div img
-{
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-}
-figure div img:hover
-{
-    outline: solid 3px #059;
-}
-figcaption p
-{
-    grid-area: one;
-    font-size:  .8rem;
-    padding: 5px;
-    font-family: var(--font);
-    font-weight: 200;
-    font-variant: small-caps;
-    text-transform:capitalize;
-}
 
-figure
+
+
+
+img
 {
     width: 100%;
-}
-figcaption
-{
-    margin-top: 10px;
-    border-bottom: 2px #050 solid;
-}
-.page_1
-{
-    grid-area: one;
-}
-.page_2
-{
-    grid-area: two;
+    height: 100%;
+    object-fit:cover;
 }
 
-.page_3
-{
-    grid-area: three;
-}
-
-.page_4
-{
-    grid-area: fourth;
-}
-
-span
-{
-    position: relative;
-}
-
-a:hover figcaption  p
-{
-    color:#fff;
-    transition: all 2s;
-}
-
-a:hover figcaption  p span#derecha
-{
-    left: -15px;
-    transition: all 2s linear ;
-    color:#fff;
-}
-
-a:hover figcaption  p span#izquierda
-{
-    left: 15px;
-    transition: all 2s;
-    color:#fff;
-}
-
-a:hover figcaption
-{
-    border-bottom: 3px solid #059;
-}
+/*
 @keyframes  proyects_animation
 {
     0%
     {
-        left: -10000px;
+        left: 0%;
         opacity: 0;
     }
 
-    50%
-    {
-        opacity:.2;
-    }
 
     100%
     {
-        left: 64vh;
-        opacity: .5;
+        text-align: center;
+        opacity: 1;
     }
 }
-
+*/
 
 @keyframes parrafo_animado
 {
@@ -290,9 +221,13 @@ a:hover figcaption
 
 #contact
 {
+    background-image: url(https://wallpapercave.com/wp/wp4469566.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
-    background: #000;
     display: flex;
     font-family: var(--font);
 }
